@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>h5SDK</title>
+        <link rel="stylesheet" href="/index.css" />
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+            }
+
+            body {
+                box-sizing: border-box;
+                padding: 10px;
+                color: black;
+                font-size: 15px;
+            }
+
+            .btn-list {
+                margin-top: 50px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                justify-content: center;
+            }
+
+            .btn-item {
+                text-align: center;
+                border-radius: 5px;
+                box-shadow: 0 0 5px #4b4b4b60;
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+
+            .btn-item:nth-child(2n) {
+                margin-left: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="btn-list"></div>
+        <script type="module" src="/src/index.ts"></script>
+    </body>
+</html>
