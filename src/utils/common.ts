@@ -66,13 +66,31 @@ export function deepCloneObj<T>(obj: AnyObject) {
 
 /**是否为无效值 */
 export function isInvalidVal(val: any) {
-    return [NaN, undefined, null, 'null', 'undefined', 'NaN'].indexOf(val) >= 0
+    return (
+        ['', NaN, undefined, null, 'null', 'undefined', 'NaN'].indexOf(val) >= 0
+    )
 }
 
-/** p8Log日志 */
-export function p8Log(...args) {
+/** sdkLog日志 */
+export function sdkLog(...args) {
     console.log(
-        `P8Log: ${getFormatDate(null, 'YYYY-MM-DD hh:mm:ss')} ========> `,
+        `sdkLog: ${getFormatDate(null, 'YYYY-MM-DD hh:mm:ss')} ========> `,
+        ...args
+    )
+}
+
+/** sdkLog日志: warn */
+export function sdkWarnLog(...args) {
+    console.warn(
+        `sdkLog: ${getFormatDate(null, 'YYYY-MM-DD hh:mm:ss')} ========> `,
+        ...args
+    )
+}
+
+/** sdkLog日志: err */
+export function sdkErrorLog(...args) {
+    console.error(
+        `sdkLog: ${getFormatDate(null, 'YYYY-MM-DD hh:mm:ss')} ========> `,
         ...args
     )
 }

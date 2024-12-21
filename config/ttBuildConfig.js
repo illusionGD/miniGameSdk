@@ -5,9 +5,9 @@ export default {
         sourcemap: true, // 是否生成 source map
         emptyOutDir: false,
         lib: {
-            name: 'WXSDK',
+            name: 'TTSDK',
             entry: ['./src/sdk/tt/index.ts'],
-            fileName: (format, entryName) => `sdk-wx-1.0.0.${format}.js`,
+            fileName: (format, entryName) => `sdk-tt-1.0.0.${format}.js`,
             formats: ['cjs', 'es', 'umd'],
         },
         watch: {

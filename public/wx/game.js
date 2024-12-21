@@ -1,1 +1,1 @@
-import wxSdk from './sdk-wx-1.0.0.es'
+require('./sdk-wx-1.0.0.cjs')
