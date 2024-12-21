@@ -13,7 +13,7 @@ const btnList = [
         label: 'banner广告',
         onClick: () => {
             const ad = wxGameSdk.showBannerAd({
-                adUnitId: 'adunit-3a241b4da2d0fb46',
+                adUnitId: '',
                 style: { left: 0, top: 0, width: 100, height: 100 },
             })
             console.log('🚀 ~ ad:', ad)
@@ -23,7 +23,7 @@ const btnList = [
         label: '激励广告',
         onClick: () => {
             const ad = wxGameSdk.showRewardedVideoAd({
-                adUnitId: 'adunit-3a241b4da2d0fb46',
+                adUnitId: '',
             })
             console.log('🚀 ~ ad:', ad)
         },
@@ -32,7 +32,7 @@ const btnList = [
         label: '插屏广告',
         onClick: () => {
             const ad = wxGameSdk.showInterstitialAd({
-                adUnitId: 'adunit-3a241b4da2d0fb46',
+                adUnitId: '',
             })
             console.log('🚀 ~ ad:', ad)
         },
