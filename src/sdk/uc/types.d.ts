@@ -1,4 +1,4 @@
-import { AnyObject } from '../../types'
+import { AnyObject, GameInfo } from '../../types'
 
 export interface UC_Type {
     login: (
@@ -40,36 +40,9 @@ export interface UC_Type {
 
     /** 主动发起转发 / 分享操作 */
     shareAppMessage(opt: UC_Share_App_Message_Opt_Type)
+    /** 获取回流时分享出去带的 query，UCSDKVersion >= 1.0.3 */
+    getLaunchOptionsSync: () => any
 }
-
-export interface GlobalData_Type {
-    /** sdk版本号 */
-    version?: string
-    /** 系统设备信息 */
-    systemInfo?: UC_Get_System_Info_Res_Type
-    /** onLaunch信息：来源渠道、启动小游戏状态值、query 不存在则没有 */
-    launchInfo?: {
-        entry?: string
-        state?: string
-        query?: string
-    }
-    /** 用户信息 */
-    userInfo?: AnyObject
-    /** 用户授权状态 */
-    authorizeInfo?: UC_Author_Status_Type
-    urlConfig?: Partial<P8_Url_Config_Type>
-}
-
-export interface P8_Url_Config_Type {
-    url_address: {
-        platform_url: string
-        rg_url: string
-        data_url: string
-        fcm_url: string
-        ad_url: string
-    }
-}
-
 export interface UC_Author_Status_Type {
     userInfo?: boolean
     camera?: boolean
@@ -183,14 +156,4 @@ export interface UC_Get_System_Info_Res_Type {
         height: number
     }
     env: string
-}
-
-export interface P8_Quick_Game_SDK_Init_Data {
-    aid: string
-    appid: string
-    key: string
-    site: string
-    channel?: string
-    appid?: string
-    appName?: string
 }
